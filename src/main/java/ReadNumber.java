@@ -82,6 +82,70 @@ public class ReadNumber {
                 }
             }
         }
+
+        if (20 <= number && number < 100) {
+            switch (number / 10) {
+                case 2:
+                    readNumber = "Twenty ";
+                    break;
+                case 3:
+                    readNumber = "Thirty ";
+                    break;
+                case 4:
+                    readNumber = "Forty ";
+                    break;
+                case 5:
+                    readNumber = "Fifty ";
+                    break;
+                case 6:
+                    readNumber = "Sixty ";
+                    break;
+                case 7:
+                    readNumber = "Seventy ";
+                    break;
+                case 8:
+                    readNumber = "Eighty ";
+                    break;
+                case 9:
+                    readNumber = "Ninety ";
+                    break;
+            }
+
+            number = number % 10;
+            switch (number) {
+//                case 0:
+//                    readNumber = readNumber;
+//                    break;
+                case 1:
+                    readNumber = readNumber + "One";
+                    break;
+                case 2:
+                    readNumber = readNumber + "Two";
+                    break;
+                case 3:
+                    readNumber = readNumber + "Three";
+                    break;
+                case 4:
+                    readNumber = readNumber + "Four";
+                    break;
+                case 5:
+                    readNumber = readNumber + "Five";
+                    break;
+                case 6:
+                    readNumber = readNumber + "Six";
+                    break;
+                case 7:
+                    readNumber = readNumber + "Seven";
+                    break;
+                case 8:
+                    readNumber = readNumber +"Eight";
+                    break;
+                case 9:
+                    readNumber = readNumber + "Night";
+                    break;
+            }
+            ;
+        }
         System.out.println(readNumber);
     }
 }
