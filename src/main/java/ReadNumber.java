@@ -7,6 +7,7 @@ public class ReadNumber {
         int number = scanner.nextInt();
         String readNumber = "";
 
+        System.out.print("Number " + number + " read is ");
         switch (number) {
             case 0:
                 readNumber = "Zero";
@@ -38,13 +39,49 @@ public class ReadNumber {
             case 9:
                 readNumber = "Night";
                 break;
-                default:
-                    System.out.println("Out of ability");
-
         }
 
-        System.out.println("Number " + number + " read is " + readNumber);
+        if (10 <= number && number < 20) {
 
-
+            switch (number) {
+                case 10:
+                    readNumber = "Ten";
+                    break;
+                case 11:
+                    readNumber = "Eleven";
+                    break;
+                case 12:
+                    readNumber = "Twelve";
+                    break;
+                case 13:
+                    readNumber = "Thirteen";
+                    break;
+                case 15:
+                    readNumber = "Fifteen";
+                    break;
+                case 18:
+                    readNumber = "Eighteen";
+                    break;
+                default:{
+                    number = number % 10;
+                    switch (number) {
+                        case 4:
+                            readNumber = "Four";
+                            break;
+                        case 6:
+                            readNumber = "Six";
+                            break;
+                        case 7:
+                            readNumber = "Seven";
+                            break;
+                        case 9:
+                            readNumber = "Nine";
+                            break;
+                    }
+                    readNumber = readNumber + "teen.";
+                }
+            }
+        }
+        System.out.println(readNumber);
     }
 }
